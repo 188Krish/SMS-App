@@ -11,6 +11,7 @@ export class DashoardComponent implements OnInit {
 
   constructor(private loginService: AuthenticationService, private router: Router) { }
 
+  isUserLogedIn = this.loginService.isUserLogedIn();
   ngOnInit(): void {
   }
 

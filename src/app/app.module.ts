@@ -8,20 +8,33 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { DashoardComponent } from './dashoard/dashoard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoMaterialModule } from './material.module';
+import { HomeComponent } from './home/home.component';
+import { FeesComponent } from './fees/fees.component';
+import { TransportComponent } from './transport/transport.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashoardComponent
+    DashoardComponent,
+    HomeComponent,
+    FeesComponent,
+    TransportComponent,
+    EventsComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    DemoMaterialModule,
     FormsModule,
     RecaptchaModule
   ],
   providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
