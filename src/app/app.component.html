@@ -1,1 +1,34 @@
-<router-outlet></router-outlet>
+<div *ngIf="isUserLogedIn" class="side-nav">
+    <mat-toolbar>
+        <mat-toolbar-row>
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <mat-sidenav-container class="example-container">
+        <mat-sidenav #drawer mode="side" opened role="navigation">
+          <mat-nav-list>
+            <img src="assets/img/photo.jpg" alt="Puli" class="image">
+            <p class="admin-id"> TJL123 </p>
+            <a mat-list-item routerLink='home'>Home</a>
+            <a mat-list-item routerLink='fees'>Online Fee Payment</a>
+            <!-- <a mat-list-item routerLink='fees'>Fee Information</a> -->
+            <a mat-list-item routerLink='transport'>Transport</a>
+            <a mat-list-item routerLink='events'>Academic Events</a>
+            <a mat-list-item routerLink='Attendance'>Attendance Information</a>
+            <!-- <a mat-list-item routerLink='first'>Student Profile</a> -->
+            <!-- <a mat-list-item routerLink='Notice Board'>Notice Board</a>
+                        <a mat-list-item routerLink='Exam Time Table'>Exam Time Table</a>
+                        <a mat-list-item routerLink='Syllabus'>Syllabus</a>
+                        <a mat-list-item routerLink='Library'>Library</a>
+                        <a mat-list-item routerLink='Assignments'>Assignments</a>
+                        <a mat-list-item routerLink='Sports'>Sports</a> -->
+            <a mat-list-item (click)="userlogout()">Logout</a>
+          </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <router-outlet></router-outlet>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+</div>

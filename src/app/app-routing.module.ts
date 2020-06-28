@@ -1,20 +1,15 @@
+import { AppComponent } from './app.component';
 import { TransportComponent } from './transport/transport.component';
 import { EventsComponent } from './events/events.component';
 import { HomeComponent } from './home/home.component';
-import { AuthGaurdService } from './service/auth-gaurd.service';
-import { DashoardComponent } from './dashoard/dashoard.component';
-import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FeesComponent } from './fees/fees.component';
 
 const routes: Routes = [
   {
-    path: 'login', component: LoginComponent
-  },
-  {
-    path: 'dashboard', component: DashoardComponent,
-    canActivate: [AuthGaurdService],
+    path: 'app', component: AppComponent,
+    // canActivate: [AuthGaurdService],
     children: [
       {
         path: 'home',
