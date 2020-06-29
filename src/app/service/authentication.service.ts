@@ -9,7 +9,7 @@ export class AuthenticationService {
 
   authenticationLogin(email: string, password: string) {
     if (email === 'saikrishna.gourisetty@gmail.com' && password === 'password') {
-      sessionStorage.setItem('email', email);
+      localStorage.setItem('email', email);
       return true;
     }
     else {
@@ -18,13 +18,13 @@ export class AuthenticationService {
   }
 
   isUserLogedIn() {
-    const user = sessionStorage.getItem('email');
+    const user = localStorage.getItem('email');
     console.log(!(user === null));
     return !(user === null);
   }
 
   userLogout() {
-    sessionStorage.removeItem('email');
+    localStorage.removeItem('email');
   }
 
 }
