@@ -1,0 +1,17 @@
+{
+  "profileInfo": [{
+    "studentdata": [{
+      "studname": "shreya yadav",
+      "admissionnumber": "2013-101",
+      "dob": "08/02/2009",
+      "class": "5",
+      "section": "g",
+      "email-id": "asmohan1972@gmail.com",
+      "contactnumber": "9591703278",
+      "t-pin": "090902001",
+      "role": "student",
+      "isStudent": true
+    }],
+    "role": 7
+  }]
+}

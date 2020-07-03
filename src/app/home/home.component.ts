@@ -1,3 +1,4 @@
+import { UserdetailService } from './../service/userdetail.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
+  data: any = [];
+  studentdata: any = [];
 
-  constructor() { }
+  constructor(private userinfoService: UserdetailService) { }
 
   ngOnInit(): void {
+    this.userinfoService.getProducts().subscribe((res) => {
+      this.data = res;
+      this.studentdata = this.data[0].studentdata;
+      console.log(this.data[0].studentdata);
+    });
   }
 
 }

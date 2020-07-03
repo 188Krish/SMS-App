@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { FeesComponent } from './fees/fees.component';
 import { TransportComponent } from './transport/transport.component';
 import { EventsComponent } from './events/events.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EventsComponent } from './events/events.component';
     BrowserModule,
     DemoMaterialModule,
     FormsModule,
-    RecaptchaModule
+    RecaptchaModule,
+    HttpClientModule
   ],
   providers: [AuthenticationService],
   bootstrap: [AppComponent]

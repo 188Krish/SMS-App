@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "fake-api": "json-server --watch content.json --port 3004"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +24,7 @@
     "@angular/router": "~9.1.11",
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
+    "json-server": "^0.16.1",
     "ng-recaptcha": "^5.0.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
