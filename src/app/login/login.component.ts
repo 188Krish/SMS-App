@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  email = '';
+  username = '';
   password = '';
   inValidLogin = false;
   recaptacha: any[];
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    if ((this.loginservice.authenticationLogin(this.email, this.password))) {
+    if ((this.loginservice.authenticationLogin(this.username, this.password))) {
       this.router.navigate(['dashboard']);
       this.inValidLogin = false;
     }
